@@ -18,8 +18,10 @@ writing them to disk? That's where `gulp-inject-modules` comes in.
 
 ## Usage
 
-Here's an example using [gulp-babel][gulp-babel-url] and
-[gulp-mocha][gulp-mocha-url].
+Here's an example using [gulp-babel][gulp-babel-url], [gulp-mocha][gulp-mocha-url],
+and [gulp-filter][gulp-filter-url] to transpile all your JavaScript source and
+unit tests, then inject the code into the module loader before calling Mocha to
+run the unit tests.
 
 ```javascript
 var babel = require('gulp-babel');
@@ -27,12 +29,12 @@ var filter = require('gulp-filter');
 var injectModules = require('gulp-inject-modules');
 var mocha = require('gulp-mocha');
 
-gulp.task('test', ['lint-src', 'lint-test', 'clean-build'], function () {
+gulp.task('test', [ /* tasks to lint code and clean directories */ ], function () {
 	return gulp
 		.src(['src/**/*.js', 'test/**/*.js']) // get all source and test files
 		.pipe(babel()) // transpile the source and tests
 		.pipe(injectModules()) // load the transpiled code into Node's module system
-		.pipe(filter('**/*.js')) // mocha only likes js files
+		.pipe(filter('test/**/*.js')) // mocha only likes js files
 		.pipe(mocha()); // run the tests
 });
 ```
@@ -67,3 +69,4 @@ THE SOFTWARE.
 [downloads-url]: https://npmjs.org/package/gulp-inject-modules
 [gulp-babel-url]: https://www.npmjs.com/package/gulp-babel
 [gulp-mocha-url]: https://www.npmjs.com/package/gulp-mocha
+[gulp-filter-url]: https://www.npmjs.com/package/gulp-filter
