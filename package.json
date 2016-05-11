@@ -1,6 +1,6 @@
 {
   "name": "gulp-inject-modules",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Loads JavaScript files on-demand from a Gulp stream into Node's module loader.",
   "main": "index.js",
   "author": "Chris Barber <chris@cb1inc.com> (https://github.com/cb1kenobi)",
@@ -10,10 +10,10 @@
     "gulp",
     "gulpjs",
     "inject",
-	"module",
+    "module",
     "loader",
     "cache",
-	"require",
+    "require",
     "babel",
     "babeljs",
     "es2015",
@@ -25,6 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "source-map-support": "^0.4.0",
     "through2": "^2.0.1"
   },
   "homepage": "https://github.com/cb1kenobi/gulp-inject-modules",

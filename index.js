@@ -2,11 +2,20 @@
 
 var Module = require('module');
 var path = require('path');
+var sourceMap = require('source-map-support');
 var through = require('through2').obj;
 var vm = require('vm');
 
 var cache = {};
 var originalLoader = Module._extensions['.js'];
+
+sourceMap.install({
+	retrieveFile: function (path) {
+		if (cache[path]) {
+			return cache[path].contents.toString();
+		}
+	}
+});
 
 Module._extensions['.js'] = function (module, filename) {
 	var file = cache[filename];
