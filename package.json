@@ -1,6 +1,6 @@
 {
   "name": "gulp-inject-modules",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Loads JavaScript files on-demand from a Gulp stream into Node's module loader.",
   "main": "index.js",
   "author": "Chris Barber <chris@cb1inc.com> (https://github.com/cb1kenobi)",
