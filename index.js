@@ -21,7 +21,6 @@ Module._extensions['.js'] = function (module, filename) {
 	var file = cache[filename];
 	if (file) {
 		module._compile(file.contents.toString(), filename);
-		delete cache[filename];
 	} else {
 		originalLoader(module, filename);
 	}
