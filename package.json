@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "source-map-support": "^0.4.0",
+    "source-map-support": "^0.5.6",
     "through2": "^2.0.1"
   },
   "homepage": "https://github.com/cb1kenobi/gulp-inject-modules",
