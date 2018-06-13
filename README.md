@@ -1,5 +1,7 @@
 # gulp-inject-modules
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cb1kenobi/gulp-inject-modules.svg)](https://greenkeeper.io/)
+
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
